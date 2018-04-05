@@ -1,0 +1,37 @@
+{
+  "name": "youtube-player-plugin",
+  "version": "1.0.0",
+  "description": "Youtube player plugin for content-presenter",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "babel src -d dist",
+    "prepublish": "npm run transpile",
+    "build": "rm -rf dist && npm run transpile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duongtdn/youtube-player-plugin.git"
+  },
+  "author": "duongtdn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duongtdn/youtube-player-plugin/issues"
+  },
+  "homepage": "https://github.com/duongtdn/youtube-player-plugin#readme",
+  "dependencies": {
+    "content-presenter": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.11.1",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "webpack": "^2.2.1"
+  }
+}
