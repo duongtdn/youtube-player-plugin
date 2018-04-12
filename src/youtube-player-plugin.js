@@ -64,7 +64,6 @@ export default class YoutubePlayerPlugin {
     const tag = document.createElement('script');
     tag.src = YOUTUBE_API_SOURCE;
     const body = document.getElementsByTagName('BODY')[0];
-    console.log(body)
     body.appendChild(tag, body);
     return this;
   }
