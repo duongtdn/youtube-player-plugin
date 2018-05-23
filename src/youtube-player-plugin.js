@@ -22,10 +22,14 @@ export default class YoutubePlayerPlugin {
     /* load plugin script, then create new player when api is loaded */
     this._loadPluginScript();
     window.onYouTubeIframeAPIReady = () => {
-      console.log('Loaded Youtube API');
-      this._clearTimeout();
-      this._instance = this._createPlayer();
+      this._onApiReady();
     }
+  }
+
+  _onApiReady() {
+    console.log('Loaded Youtube API');
+    this._clearTimeout();
+    this._instance = this._createPlayer();
   }
 
   load(src) {
@@ -61,11 +65,25 @@ export default class YoutubePlayerPlugin {
   }
 
   _loadPluginScript() {
+    if (this._checkIfScriptExist()) {
+      return this;
+    }
     const tag = document.createElement('script');
     tag.src = YOUTUBE_API_SOURCE;
     const body = document.getElementsByTagName('BODY')[0];
     body.appendChild(tag, body);
     return this;
+  }
+
+  _checkIfScriptExist() {
+    const el = document.getElementsByTagName('script');
+    for (let i = 0; i < el.length; i++) {
+      const e = el[i];
+      if (e.src === YOUTUBE_API_SOURCE) {
+        return true;
+      }
+    }
+    return false;
   }
 
   _createPlayer() {
