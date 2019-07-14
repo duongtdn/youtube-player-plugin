@@ -136,4 +136,5 @@ export default class YoutubePlayerPlugin {
 }
 
 YoutubePlayerPlugin.playerName = 'YOUTUBE'
-YoutubePlayerPlugin.version = '1.0.0'
+YoutubePlayerPlugin.version = '1.1.0'
+YoutubePlayerPlugin.media = true

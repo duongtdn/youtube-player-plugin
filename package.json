@@ -1,12 +1,13 @@
 {
   "name": "youtube-player-plugin",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Youtube player plugin for content-presenter",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
     "transpile": "babel src -d dist",
-    "prepare": "npm run build",
-    "build": "rm -rf dist && npm run transpile"
+    "prepare": "npm run clean && npm run build",
+    "build": "npm run transpile"
   },
   "repository": {
     "type": "git",
