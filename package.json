@@ -1,5 +1,5 @@
 {
-  "name": "youtube-player-plugin",
+  "name": "@elearn/youtube-player-plugin",
   "version": "1.1.0",
   "description": "Youtube player plugin for content-presenter",
   "main": "index.js",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/duongtdn/youtube-player-plugin#readme",
   "dependencies": {
-    "content-presenter": "^3.0.0"
+    "content-presenter": "^3.1.1"
   },
   "peerDependencies": {
     "react": "^16.8.6",
